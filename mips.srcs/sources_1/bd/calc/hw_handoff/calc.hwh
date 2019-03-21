@@ -1,0 +1,462 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sun Feb 24 21:40:00 2019" VIVADOVERSION="2018.2.2">
+
+  <SYSTEMINFO ARCH="kintex7" DEVICE="7k70t" NAME="calc" PACKAGE="fbv676" SPEEDGRADE="-1"/>
+
+  <EXTERNALPORTS>
+    <PORT CLKFREQUENCY="50000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="cf_0" PORT="clk"/>
+        <CONNECTION INSTANCE="alu_0" PORT="clk"/>
+        <CONNECTION INSTANCE="pc_0" PORT="clk"/>
+        <CONNECTION INSTANCE="mem_0" PORT="clk"/>
+        <CONNECTION INSTANCE="cntrl_fsm_0" PORT="clk"/>
+        <CONNECTION INSTANCE="regfile_0" PORT="clk"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="rst" SIGIS="rst" SIGNAME="External_Ports_rst">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="cf_0" PORT="rst"/>
+        <CONNECTION INSTANCE="pc_0" PORT="rst"/>
+        <CONNECTION INSTANCE="cntrl_fsm_0" PORT="rst"/>
+        <CONNECTION INSTANCE="regfile_0" PORT="rst"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="mem_en" SIGIS="undef" SIGNAME="cntrl_fsm_0_mem_en">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="cntrl_fsm_0" PORT="mem_en"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="alu_en" SIGIS="undef" SIGNAME="cntrl_fsm_0_alu_en">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="cntrl_fsm_0" PORT="alu_en"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="3" NAME="op_code" RIGHT="0" SIGIS="undef" SIGNAME="cntrl_fsm_0_op_code">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="cntrl_fsm_0" PORT="op_code"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="3" NAME="alu_b" RIGHT="0" SIGIS="undef" SIGNAME="cntrl_fsm_0_b">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="cntrl_fsm_0" PORT="b"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="reg_r_en" SIGIS="undef" SIGNAME="cntrl_fsm_0_reg_r_en">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="cntrl_fsm_0" PORT="reg_r_en"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="3" NAME="alu_a" RIGHT="0" SIGIS="undef" SIGNAME="cntrl_fsm_0_a">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="cntrl_fsm_0" PORT="a"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="3" NAME="rdata0" RIGHT="0" SIGIS="undef" SIGNAME="regfile_0_rdata0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="regfile_0" PORT="rdata0"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="pc_en" SIGIS="undef" SIGNAME="cntrl_fsm_0_pc_inc_en">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="cntrl_fsm_0" PORT="pc_inc_en"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="3" NAME="eax" RIGHT="0" SIGIS="undef" SIGNAME="regfile_0_eax">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="regfile_0" PORT="eax"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="3" NAME="ebx" RIGHT="0" SIGIS="undef" SIGNAME="regfile_0_ebx">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="regfile_0" PORT="ebx"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="3" NAME="ecx" RIGHT="0" SIGIS="undef" SIGNAME="regfile_0_ecx">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="regfile_0" PORT="ecx"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="3" NAME="addr" RIGHT="0" SIGIS="undef" SIGNAME="pc_0_addr">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="pc_0" PORT="addr"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="3" NAME="alu_out" RIGHT="0" SIGIS="undef" SIGNAME="alu_0_result">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="alu_0" PORT="result"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="3" NAME="waddr" RIGHT="0" SIGIS="undef" SIGNAME="cntrl_fsm_0_waddr">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="cntrl_fsm_0" PORT="waddr"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="reg_w_en" SIGIS="undef" SIGNAME="cntrl_fsm_0_reg_w_en">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="cntrl_fsm_0" PORT="reg_w_en"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="3" NAME="addr_set" RIGHT="0" SIGIS="undef" SIGNAME="cntrl_fsm_0_pc_set">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="cntrl_fsm_0" PORT="pc_set"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="addr_set_en" SIGIS="undef" SIGNAME="cntrl_fsm_0_pc_set_en">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="cntrl_fsm_0" PORT="pc_set_en"/>
+      </CONNECTIONS>
+    </PORT>
+  </EXTERNALPORTS>
+
+  <EXTERNALINTERFACES/>
+
+  <MODULES>
+    <MODULE FULLNAME="/alu_0" HWVERSION="1.0" INSTANCE="alu_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="alu" VLNV="xilinx.com:module_ref:alu:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="calc_alu_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="en" SIGIS="undef" SIGNAME="cntrl_fsm_0_alu_en">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="cntrl_fsm_0" PORT="alu_en"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="50000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="c_in" SIGIS="undef" SIGNAME="cf_0_carry_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="cf_0" PORT="carry_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="op_code" RIGHT="0" SIGIS="undef" SIGNAME="cntrl_fsm_0_op_code">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="cntrl_fsm_0" PORT="op_code"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="a" RIGHT="0" SIGIS="undef" SIGNAME="cntrl_fsm_0_a">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="cntrl_fsm_0" PORT="a"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="b" RIGHT="0" SIGIS="undef" SIGNAME="cntrl_fsm_0_b">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="cntrl_fsm_0" PORT="b"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="c_out" SIGIS="undef" SIGNAME="alu_0_c_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="cf_0" PORT="carry_in"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="result" RIGHT="0" SIGIS="undef" SIGNAME="alu_0_result">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="alu_out"/>
+            <CONNECTION INSTANCE="regfile_0" PORT="wdata"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/cf_0" HWVERSION="1.0" INSTANCE="cf_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="cf" VLNV="xilinx.com:module_ref:cf:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="calc_cf_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="carry_in" SIGIS="undef" SIGNAME="alu_0_c_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="alu_0" PORT="c_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="50000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rst" SIGIS="rst" SIGNAME="External_Ports_rst">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="rst"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="en" SIGIS="undef" SIGNAME="cntrl_fsm_0_reg_w_en">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="cntrl_fsm_0" PORT="reg_w_en"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="carry_out" SIGIS="undef" SIGNAME="cf_0_carry_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="alu_0" PORT="c_in"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/cntrl_fsm_0" HWVERSION="1.0" INSTANCE="cntrl_fsm_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="cntrl_fsm" VLNV="xilinx.com:module_ref:cntrl_fsm:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="calc_cntrl_fsm_0_1"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="50000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rst" SIGIS="rst" SIGNAME="External_Ports_rst">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="rst"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="data_frame" RIGHT="0" SIGIS="undef" SIGNAME="mem_0_data_frame">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="mem_0" PORT="data_frame"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="rdata0" RIGHT="0" SIGIS="undef" SIGNAME="regfile_0_rdata0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="regfile_0" PORT="rdata0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="rdata1" RIGHT="0" SIGIS="undef" SIGNAME="regfile_0_rdata1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="regfile_0" PORT="rdata1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="pc_inc_en" SIGIS="undef" SIGNAME="cntrl_fsm_0_pc_inc_en">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="pc_en"/>
+            <CONNECTION INSTANCE="pc_0" PORT="inc_en"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="pc_set_en" SIGIS="undef" SIGNAME="cntrl_fsm_0_pc_set_en">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="addr_set_en"/>
+            <CONNECTION INSTANCE="pc_0" PORT="set_en"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="mem_en" SIGIS="undef" SIGNAME="cntrl_fsm_0_mem_en">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="mem_en"/>
+            <CONNECTION INSTANCE="mem_0" PORT="en"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="reg_r_en" SIGIS="undef" SIGNAME="cntrl_fsm_0_reg_r_en">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="reg_r_en"/>
+            <CONNECTION INSTANCE="regfile_0" PORT="r_en"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="alu_en" SIGIS="undef" SIGNAME="cntrl_fsm_0_alu_en">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="alu_en"/>
+            <CONNECTION INSTANCE="alu_0" PORT="en"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="reg_w_en" SIGIS="undef" SIGNAME="cntrl_fsm_0_reg_w_en">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="reg_w_en"/>
+            <CONNECTION INSTANCE="cf_0" PORT="en"/>
+            <CONNECTION INSTANCE="regfile_0" PORT="w_en"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="pc_set" RIGHT="0" SIGIS="undef" SIGNAME="cntrl_fsm_0_pc_set">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="addr_set"/>
+            <CONNECTION INSTANCE="pc_0" PORT="set"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="raddr0" RIGHT="0" SIGIS="undef" SIGNAME="cntrl_fsm_0_raddr0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="regfile_0" PORT="raddr0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="raddr1" RIGHT="0" SIGIS="undef" SIGNAME="cntrl_fsm_0_raddr1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="regfile_0" PORT="raddr1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="waddr" RIGHT="0" SIGIS="undef" SIGNAME="cntrl_fsm_0_waddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="waddr"/>
+            <CONNECTION INSTANCE="regfile_0" PORT="waddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="op_code" RIGHT="0" SIGIS="undef" SIGNAME="cntrl_fsm_0_op_code">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="op_code"/>
+            <CONNECTION INSTANCE="alu_0" PORT="op_code"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="b" RIGHT="0" SIGIS="undef" SIGNAME="cntrl_fsm_0_b">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="alu_b"/>
+            <CONNECTION INSTANCE="alu_0" PORT="b"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="a" RIGHT="0" SIGIS="undef" SIGNAME="cntrl_fsm_0_a">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="alu_a"/>
+            <CONNECTION INSTANCE="alu_0" PORT="a"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/mem_0" HWVERSION="1.0" INSTANCE="mem_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="mem" VLNV="xilinx.com:module_ref:mem:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="calc_mem_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="50000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="en" SIGIS="undef" SIGNAME="cntrl_fsm_0_mem_en">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="cntrl_fsm_0" PORT="mem_en"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="addr" RIGHT="0" SIGIS="undef" SIGNAME="pc_0_addr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="pc_0" PORT="addr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="data_frame" RIGHT="0" SIGIS="undef" SIGNAME="mem_0_data_frame">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="cntrl_fsm_0" PORT="data_frame"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/pc_0" HWVERSION="1.0" INSTANCE="pc_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="pc" VLNV="xilinx.com:module_ref:pc:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="calc_pc_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="50000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="inc_en" SIGIS="undef" SIGNAME="cntrl_fsm_0_pc_inc_en">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="cntrl_fsm_0" PORT="pc_inc_en"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="set_en" SIGIS="undef" SIGNAME="cntrl_fsm_0_pc_set_en">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="cntrl_fsm_0" PORT="pc_set_en"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rst" SIGIS="rst" SIGNAME="External_Ports_rst">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="rst"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="set" RIGHT="0" SIGIS="undef" SIGNAME="cntrl_fsm_0_pc_set">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="cntrl_fsm_0" PORT="pc_set"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="addr" RIGHT="0" SIGIS="undef" SIGNAME="pc_0_addr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="addr"/>
+            <CONNECTION INSTANCE="mem_0" PORT="addr"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/regfile_0" HWVERSION="1.0" INSTANCE="regfile_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="regfile" VLNV="xilinx.com:module_ref:regfile:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="calc_regfile_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="50000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="r_en" SIGIS="undef" SIGNAME="cntrl_fsm_0_reg_r_en">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="cntrl_fsm_0" PORT="reg_r_en"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="w_en" SIGIS="undef" SIGNAME="cntrl_fsm_0_reg_w_en">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="cntrl_fsm_0" PORT="reg_w_en"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rst" SIGIS="rst" SIGNAME="External_Ports_rst">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="rst"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="raddr0" RIGHT="0" SIGIS="undef" SIGNAME="cntrl_fsm_0_raddr0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="cntrl_fsm_0" PORT="raddr0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="raddr1" RIGHT="0" SIGIS="undef" SIGNAME="cntrl_fsm_0_raddr1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="cntrl_fsm_0" PORT="raddr1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="waddr" RIGHT="0" SIGIS="undef" SIGNAME="cntrl_fsm_0_waddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="cntrl_fsm_0" PORT="waddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="wdata" RIGHT="0" SIGIS="undef" SIGNAME="alu_0_result">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="alu_0" PORT="result"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="rdata0" RIGHT="0" SIGIS="undef" SIGNAME="regfile_0_rdata0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="rdata0"/>
+            <CONNECTION INSTANCE="cntrl_fsm_0" PORT="rdata0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="rdata1" RIGHT="0" SIGIS="undef" SIGNAME="regfile_0_rdata1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="cntrl_fsm_0" PORT="rdata1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="eax" RIGHT="0" SIGIS="undef" SIGNAME="regfile_0_eax">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="eax"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="ebx" RIGHT="0" SIGIS="undef" SIGNAME="regfile_0_ebx">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="ebx"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="ecx" RIGHT="0" SIGIS="undef" SIGNAME="regfile_0_ecx">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="ecx"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+  </MODULES>
+
+</EDKSYSTEM>

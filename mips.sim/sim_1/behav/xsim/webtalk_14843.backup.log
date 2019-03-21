@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Webtalk v2018.2.2 (64-bit)
+# SW Build 2348494 on Mon Oct  1 18:25:39 MDT 2018
+# IP Build 2318053 on Mon Oct  1 21:44:26 MDT 2018
+# Start of session at: Mon Mar 18 20:30:33 2019
+# Process ID: 14843
+# Current directory: /home/hedhyw/Development/GraduateWork/MIPS/mips.sim/sim_1/behav/xsim
+# Command line: wbtcv -mode batch -source /home/hedhyw/Development/GraduateWork/MIPS/mips.sim/sim_1/behav/xsim/xsim.dir/regfile_test_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: /home/hedhyw/Development/GraduateWork/MIPS/mips.sim/sim_1/behav/xsim/webtalk.log
+# Journal file: /home/hedhyw/Development/GraduateWork/MIPS/mips.sim/sim_1/behav/xsim/webtalk.jou
+#-----------------------------------------------------------
+source /home/hedhyw/Development/GraduateWork/MIPS/mips.sim/sim_1/behav/xsim/xsim.dir/regfile_test_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Mon Mar 18 20:30:34 2019...

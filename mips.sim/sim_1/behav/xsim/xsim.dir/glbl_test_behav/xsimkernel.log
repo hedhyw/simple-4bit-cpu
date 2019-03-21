@@ -1,0 +1,7 @@
+Running: xsim.dir/glbl_test_behav/xsimk -simmode gui -wdb glbl_test_behav.wdb -simrunnum 0 -socket 49563
+Design successfully loaded
+Design Loading Memory Usage: 43576 KB (Peak: 43584 KB)
+Design Loading CPU Usage: 30 ms
+Simulation completed
+Simulation Memory Usage: 125832 KB (Peak: 190848 KB)
+Simulation CPU Usage: 30 ms

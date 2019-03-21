@@ -1,0 +1,228 @@
+#-----------------------------------------------------------
+# Vivado v2018.2.2 (64-bit)
+# SW Build 2348494 on Mon Oct  1 18:25:39 MDT 2018
+# IP Build 2318053 on Mon Oct  1 21:44:26 MDT 2018
+# Start of session at: Wed Feb 20 16:03:35 2019
+# Process ID: 24665
+# Current directory: /home/hedhyw/Development/GraduateWork/MIPS/mips.runs/calc_cf_0_0_synth_1
+# Command line: vivado -log calc_cf_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source calc_cf_0_0.tcl
+# Log file: /home/hedhyw/Development/GraduateWork/MIPS/mips.runs/calc_cf_0_0_synth_1/calc_cf_0_0.vds
+# Journal file: /home/hedhyw/Development/GraduateWork/MIPS/mips.runs/calc_cf_0_0_synth_1/vivado.jou
+#-----------------------------------------------------------
+source calc_cf_0_0.tcl -notrace
+Command: synth_design -top calc_cf_0_0 -part xc7k70tfbv676-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7k70t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k70t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 24888 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1294.898 ; gain = 86.805 ; free physical = 1436 ; free virtual = 10267
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'calc_cf_0_0' [/home/hedhyw/Development/GraduateWork/MIPS/mips.srcs/sources_1/bd/calc/ip/calc_cf_0_0/synth/calc_cf_0_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'cf' [/home/hedhyw/Development/GraduateWork/MIPS/mips.srcs/sim_1/new/cf.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'cf' (1#1) [/home/hedhyw/Development/GraduateWork/MIPS/mips.srcs/sim_1/new/cf.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'calc_cf_0_0' (2#1) [/home/hedhyw/Development/GraduateWork/MIPS/mips.srcs/sources_1/bd/calc/ip/calc_cf_0_0/synth/calc_cf_0_0.v:58]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 1339.523 ; gain = 131.430 ; free physical = 1419 ; free virtual = 10252
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 1339.523 ; gain = 131.430 ; free physical = 1422 ; free virtual = 10254
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7k70tfbv676-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 1339.523 ; gain = 131.430 ; free physical = 1420 ; free virtual = 10252
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7k70tfbv676-1
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 1347.531 ; gain = 139.438 ; free physical = 1434 ; free virtual = 10266
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module cf 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:44 . Memory (MB): peak = 1428.781 ; gain = 220.688 ; free physical = 2096 ; free virtual = 10951
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:44 . Memory (MB): peak = 1428.781 ; gain = 220.688 ; free physical = 2081 ; free virtual = 10939
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:14 ; elapsed = 00:00:44 . Memory (MB): peak = 1437.797 ; gain = 229.703 ; free physical = 2066 ; free virtual = 10924
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:15 ; elapsed = 00:00:45 . Memory (MB): peak = 1437.797 ; gain = 229.703 ; free physical = 2062 ; free virtual = 10921
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:15 ; elapsed = 00:00:45 . Memory (MB): peak = 1437.797 ; gain = 229.703 ; free physical = 2060 ; free virtual = 10919
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:15 ; elapsed = 00:00:45 . Memory (MB): peak = 1437.797 ; gain = 229.703 ; free physical = 2058 ; free virtual = 10917
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:15 ; elapsed = 00:00:45 . Memory (MB): peak = 1437.797 ; gain = 229.703 ; free physical = 2058 ; free virtual = 10917
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:45 . Memory (MB): peak = 1437.797 ; gain = 229.703 ; free physical = 2058 ; free virtual = 10917
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:15 ; elapsed = 00:00:45 . Memory (MB): peak = 1437.797 ; gain = 229.703 ; free physical = 2058 ; free virtual = 10917
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |LUT3 |     1|
+|2     |FDCE |     1|
++------+-----+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |     2|
+|2     |  inst   |cf     |     2|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:15 ; elapsed = 00:00:45 . Memory (MB): peak = 1437.797 ; gain = 229.703 ; free physical = 2058 ; free virtual = 10917
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:45 . Memory (MB): peak = 1437.797 ; gain = 229.703 ; free physical = 2058 ; free virtual = 10917
+Synthesis Optimization Complete : Time (s): cpu = 00:00:15 ; elapsed = 00:00:45 . Memory (MB): peak = 1437.805 ; gain = 229.703 ; free physical = 2094 ; free virtual = 10953
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+11 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:47 . Memory (MB): peak = 1521.820 ; gain = 326.375 ; free physical = 2037 ; free virtual = 10892
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Common 17-1381] The checkpoint '/home/hedhyw/Development/GraduateWork/MIPS/mips.runs/calc_cf_0_0_synth_1/calc_cf_0_0.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:15 ; elapsed = 00:00:32 . Memory (MB): peak = 1928.402 ; gain = 406.582 ; free physical = 1643 ; free virtual = 10492
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint '/home/hedhyw/Development/GraduateWork/MIPS/mips.runs/calc_cf_0_0_synth_1/calc_cf_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file calc_cf_0_0_utilization_synth.rpt -pb calc_cf_0_0_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00.14 ; elapsed = 00:00:00.19 . Memory (MB): peak = 1928.402 ; gain = 0.000 ; free physical = 1658 ; free virtual = 10507
+INFO: [Common 17-206] Exiting Vivado at Wed Feb 20 16:05:20 2019...

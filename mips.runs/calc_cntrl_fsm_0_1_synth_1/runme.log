@@ -1,0 +1,264 @@
+
+*** Running vivado
+    with args -log calc_cntrl_fsm_0_1.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source calc_cntrl_fsm_0_1.tcl
+
+
+****** Vivado v2018.2.2 (64-bit)
+  **** SW Build 2348494 on Mon Oct  1 18:25:39 MDT 2018
+  **** IP Build 2318053 on Mon Oct  1 21:44:26 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source calc_cntrl_fsm_0_1.tcl -notrace
+Command: synth_design -top calc_cntrl_fsm_0_1 -part xc7k70tfbv676-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7k70t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k70t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 13761 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1294.395 ; gain = 86.805 ; free physical = 2811 ; free virtual = 11343
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'calc_cntrl_fsm_0_1' [/home/hedhyw/Development/GraduateWork/MIPS/mips.srcs/sources_1/bd/calc/ip/calc_cntrl_fsm_0_1/synth/calc_cntrl_fsm_0_1.v:58]
+INFO: [Synth 8-6157] synthesizing module 'cntrl_fsm' [/home/hedhyw/Development/GraduateWork/MIPS/mips.srcs/sources_1/new/cntrl_fsm.v:8]
+	Parameter S0_INIT bound to: 4'b0000 
+	Parameter S1_FETCH bound to: 4'b0001 
+	Parameter S2_REG_R bound to: 4'b0010 
+	Parameter S3_ALU bound to: 4'b0011 
+	Parameter S4_REG_W bound to: 4'b0100 
+	Parameter S5_ADDR_W bound to: 4'b0101 
+	Parameter S6_PC_INC bound to: 4'b0110 
+	Parameter S7_DONE bound to: 4'b0111 
+INFO: [Synth 8-6155] done synthesizing module 'cntrl_fsm' (1#1) [/home/hedhyw/Development/GraduateWork/MIPS/mips.srcs/sources_1/new/cntrl_fsm.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'calc_cntrl_fsm_0_1' (2#1) [/home/hedhyw/Development/GraduateWork/MIPS/mips.srcs/sources_1/bd/calc/ip/calc_cntrl_fsm_0_1/synth/calc_cntrl_fsm_0_1.v:58]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1338.020 ; gain = 130.430 ; free physical = 2832 ; free virtual = 11365
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1338.020 ; gain = 130.430 ; free physical = 2822 ; free virtual = 11356
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7k70tfbv676-1
+INFO: [Device 21-403] Loading part xc7k70tfbv676-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1338.020 ; gain = 130.430 ; free physical = 2814 ; free virtual = 11347
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'cur_state_reg' in module 'cntrl_fsm'
+INFO: [Synth 8-5544] ROM "reg_w_en" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "alu_en" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "reg_r_en" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "mem_en" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "pc_set_en" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "pc_inc_en" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next_state0" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 S0_INIT |                         00000001 |                             0000
+                S1_FETCH |                         00000010 |                             0001
+                S2_REG_R |                         00000100 |                             0010
+               S5_ADDR_W |                         00001000 |                             0101
+                  S3_ALU |                         00010000 |                             0011
+                S4_REG_W |                         00100000 |                             0100
+               S6_PC_INC |                         01000000 |                             0110
+                 S7_DONE |                         10000000 |                             0111
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'cur_state_reg' using encoding 'one-hot' in module 'cntrl_fsm'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 1346.027 ; gain = 138.438 ; free physical = 2804 ; free virtual = 11337
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Muxes : 
+	   8 Input      8 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module cntrl_fsm 
+Detailed RTL Component Info : 
++---Muxes : 
+	   8 Input      8 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5544] ROM "inst/next_state0" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:41 . Memory (MB): peak = 1454.988 ; gain = 247.398 ; free physical = 2509 ; free virtual = 11040
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:41 . Memory (MB): peak = 1454.988 ; gain = 247.398 ; free physical = 2512 ; free virtual = 11043
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:16 ; elapsed = 00:00:42 . Memory (MB): peak = 1454.988 ; gain = 247.398 ; free physical = 2499 ; free virtual = 11029
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:17 ; elapsed = 00:00:43 . Memory (MB): peak = 1454.988 ; gain = 247.398 ; free physical = 2476 ; free virtual = 11006
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:17 ; elapsed = 00:00:43 . Memory (MB): peak = 1454.988 ; gain = 247.398 ; free physical = 2499 ; free virtual = 11030
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:17 ; elapsed = 00:00:43 . Memory (MB): peak = 1454.988 ; gain = 247.398 ; free physical = 2495 ; free virtual = 11025
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:17 ; elapsed = 00:00:43 . Memory (MB): peak = 1454.988 ; gain = 247.398 ; free physical = 2492 ; free virtual = 11022
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:17 ; elapsed = 00:00:43 . Memory (MB): peak = 1454.988 ; gain = 247.398 ; free physical = 2489 ; free virtual = 11019
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:17 ; elapsed = 00:00:43 . Memory (MB): peak = 1454.988 ; gain = 247.398 ; free physical = 2486 ; free virtual = 11017
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |LUT2 |     2|
+|2     |LUT5 |     2|
+|3     |LUT6 |     8|
+|4     |FDCE |     7|
+|5     |FDPE |     1|
++------+-----+------+
+
+Report Instance Areas: 
++------+---------+----------+------+
+|      |Instance |Module    |Cells |
++------+---------+----------+------+
+|1     |top      |          |    20|
+|2     |  inst   |cntrl_fsm |    20|
++------+---------+----------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:17 ; elapsed = 00:00:43 . Memory (MB): peak = 1454.988 ; gain = 247.398 ; free physical = 2483 ; free virtual = 11013
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:43 . Memory (MB): peak = 1454.988 ; gain = 247.398 ; free physical = 2470 ; free virtual = 11001
+Synthesis Optimization Complete : Time (s): cpu = 00:00:17 ; elapsed = 00:00:43 . Memory (MB): peak = 1454.996 ; gain = 247.398 ; free physical = 2470 ; free virtual = 11000
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+21 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:21 ; elapsed = 00:00:46 . Memory (MB): peak = 1540.012 ; gain = 345.070 ; free physical = 2429 ; free virtual = 10959
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Common 17-1381] The checkpoint '/home/hedhyw/Development/GraduateWork/MIPS/mips.runs/calc_cntrl_fsm_0_1_synth_1/calc_cntrl_fsm_0_1.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:19 ; elapsed = 00:00:42 . Memory (MB): peak = 2003.594 ; gain = 463.582 ; free physical = 2474 ; free virtual = 11003
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint '/home/hedhyw/Development/GraduateWork/MIPS/mips.runs/calc_cntrl_fsm_0_1_synth_1/calc_cntrl_fsm_0_1.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file calc_cntrl_fsm_0_1_utilization_synth.rpt -pb calc_cntrl_fsm_0_1_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00.22 ; elapsed = 00:00:01 . Memory (MB): peak = 2004.594 ; gain = 0.000 ; free physical = 2327 ; free virtual = 10857
+INFO: [Common 17-206] Exiting Vivado at Thu Feb 21 10:15:25 2019...

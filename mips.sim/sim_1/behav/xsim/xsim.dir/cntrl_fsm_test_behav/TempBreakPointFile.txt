@@ -1,0 +1,2 @@
+Breakpoint File Version 1.0
+32 true /home/hedhyw/Development/Graduate Work/MIPS/mips.srcs/sources_1/new/cntrl_fsm_test.v

@@ -1,0 +1,498 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<bd:repository xmlns:bd="http://www.xilinx.com/bd" bd:BoundaryCRC="0x2AD76ED0D7B78073" bd:device="xc7k70tfbv676-1" bd:isValidated="true" bd:synthFlowMode="Hierarchical" bd:tool_version="2018.2.2" bd:top="calc" bd:version="1.00.a">
+
+  <spirit:component xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009">
+    <spirit:vendor>xilinx.com</spirit:vendor>
+    <spirit:library>BlockDiagram</spirit:library>
+    <spirit:name>calc</spirit:name>
+    <spirit:version>1.00.a</spirit:version>
+    <spirit:parameters>
+      <spirit:parameter>
+        <spirit:name>isTop</spirit:name>
+        <spirit:value spirit:format="bool" spirit:resolve="immediate">true</spirit:value>
+      </spirit:parameter>
+    </spirit:parameters>
+    <spirit:busInterfaces>
+      <spirit:busInterface>
+        <spirit:name>CLK.CLK</spirit:name>
+        <spirit:displayName>Clk</spirit:displayName>
+        <spirit:description>Clock</spirit:description>
+        <spirit:busType spirit:library="signal" spirit:name="clock" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:abstractionType spirit:library="signal" spirit:name="clock_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:slave/>
+        <spirit:portMaps>
+          <spirit:portMap>
+            <spirit:logicalPort>
+              <spirit:name>CLK</spirit:name>
+            </spirit:logicalPort>
+            <spirit:physicalPort>
+              <spirit:name>clk</spirit:name>
+            </spirit:physicalPort>
+          </spirit:portMap>
+        </spirit:portMaps>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>FREQ_HZ</spirit:name>
+            <spirit:value>50000000</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="user"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>PHASE</spirit:name>
+            <spirit:value>0.000</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="default"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>CLK_DOMAIN</spirit:name>
+            <spirit:value>calc_clk</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="default"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>ASSOCIATED_RESET</spirit:name>
+            <spirit:value>rst</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="default"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:busInterface>
+      <spirit:busInterface>
+        <spirit:name>RST.RST</spirit:name>
+        <spirit:displayName>Reset</spirit:displayName>
+        <spirit:description>Reset</spirit:description>
+        <spirit:busType spirit:library="signal" spirit:name="reset" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:abstractionType spirit:library="signal" spirit:name="reset_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:slave/>
+        <spirit:portMaps>
+          <spirit:portMap>
+            <spirit:logicalPort>
+              <spirit:name>RST</spirit:name>
+            </spirit:logicalPort>
+            <spirit:physicalPort>
+              <spirit:name>rst</spirit:name>
+            </spirit:physicalPort>
+          </spirit:portMap>
+        </spirit:portMaps>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>POLARITY</spirit:name>
+            <spirit:value>ACTIVE_HIGH</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="user"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:busInterface>
+    </spirit:busInterfaces>
+    <spirit:model>
+      <spirit:views>
+        <spirit:view>
+          <spirit:name>BlockDiagram</spirit:name>
+          <spirit:envIdentifier>:vivado.xilinx.com:</spirit:envIdentifier>
+          <spirit:hierarchyRef spirit:library="BlockDiagram" spirit:name="calc_imp" spirit:vendor="xilinx.com" spirit:version="1.00.a"/>
+        </spirit:view>
+      </spirit:views>
+      <spirit:ports>
+        <spirit:port>
+          <spirit:name>clk</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>rst</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>mem_en</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>alu_en</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>op_code</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+            <spirit:vector>
+              <spirit:left>3</spirit:left>
+              <spirit:right>0</spirit:right>
+            </spirit:vector>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>alu_b</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+            <spirit:vector>
+              <spirit:left>3</spirit:left>
+              <spirit:right>0</spirit:right>
+            </spirit:vector>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>reg_r_en</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>alu_a</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+            <spirit:vector>
+              <spirit:left>3</spirit:left>
+              <spirit:right>0</spirit:right>
+            </spirit:vector>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>rdata0</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+            <spirit:vector>
+              <spirit:left>3</spirit:left>
+              <spirit:right>0</spirit:right>
+            </spirit:vector>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>pc_en</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>eax</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+            <spirit:vector>
+              <spirit:left>3</spirit:left>
+              <spirit:right>0</spirit:right>
+            </spirit:vector>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>ebx</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+            <spirit:vector>
+              <spirit:left>3</spirit:left>
+              <spirit:right>0</spirit:right>
+            </spirit:vector>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>ecx</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+            <spirit:vector>
+              <spirit:left>3</spirit:left>
+              <spirit:right>0</spirit:right>
+            </spirit:vector>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>addr</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+            <spirit:vector>
+              <spirit:left>3</spirit:left>
+              <spirit:right>0</spirit:right>
+            </spirit:vector>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>alu_out</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+            <spirit:vector>
+              <spirit:left>3</spirit:left>
+              <spirit:right>0</spirit:right>
+            </spirit:vector>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>waddr</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+            <spirit:vector>
+              <spirit:left>3</spirit:left>
+              <spirit:right>0</spirit:right>
+            </spirit:vector>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>reg_w_en</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>addr_set</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+            <spirit:vector>
+              <spirit:left>3</spirit:left>
+              <spirit:right>0</spirit:right>
+            </spirit:vector>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>addr_set_en</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+      </spirit:ports>
+    </spirit:model>
+  </spirit:component>
+
+  <spirit:design xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009">
+    <spirit:vendor>xilinx.com</spirit:vendor>
+    <spirit:library>BlockDiagram</spirit:library>
+    <spirit:name>calc_imp</spirit:name>
+    <spirit:version>1.00.a</spirit:version>
+    <spirit:componentInstances>
+      <spirit:componentInstance>
+        <spirit:instanceName>cf_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="module_ref" spirit:name="cf" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">calc_cf_0_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:referenceName">cf</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:subInstancePath"></spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:referenceType">hdl</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:BoundaryCRC">0x0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>alu_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="module_ref" spirit:name="alu" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">calc_alu_0_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:referenceName">alu</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:subInstancePath"></spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:referenceType">hdl</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:BoundaryCRC">0x0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>pc_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="module_ref" spirit:name="pc" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">calc_pc_0_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:referenceName">pc</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:subInstancePath"></spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:referenceType">hdl</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:BoundaryCRC">0x0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>mem_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="module_ref" spirit:name="mem" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">calc_mem_0_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:referenceName">mem</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:subInstancePath"></spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:referenceType">hdl</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:BoundaryCRC">0x0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>cntrl_fsm_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="module_ref" spirit:name="cntrl_fsm" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">calc_cntrl_fsm_0_1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:referenceName">cntrl_fsm</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:subInstancePath"></spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:referenceType">hdl</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:BoundaryCRC">0x0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>regfile_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="module_ref" spirit:name="regfile" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">calc_regfile_0_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:referenceName">regfile</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:subInstancePath"></spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:referenceType">hdl</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:BoundaryCRC">0x0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+    </spirit:componentInstances>
+    <spirit:adHocConnections>
+      <spirit:adHocConnection>
+        <spirit:name>clk_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="clk"/>
+        <spirit:internalPortReference spirit:componentRef="cf_0" spirit:portRef="clk"/>
+        <spirit:internalPortReference spirit:componentRef="alu_0" spirit:portRef="clk"/>
+        <spirit:internalPortReference spirit:componentRef="pc_0" spirit:portRef="clk"/>
+        <spirit:internalPortReference spirit:componentRef="mem_0" spirit:portRef="clk"/>
+        <spirit:internalPortReference spirit:componentRef="cntrl_fsm_0" spirit:portRef="clk"/>
+        <spirit:internalPortReference spirit:componentRef="regfile_0" spirit:portRef="clk"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>rst_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="rst"/>
+        <spirit:internalPortReference spirit:componentRef="cf_0" spirit:portRef="rst"/>
+        <spirit:internalPortReference spirit:componentRef="pc_0" spirit:portRef="rst"/>
+        <spirit:internalPortReference spirit:componentRef="cntrl_fsm_0" spirit:portRef="rst"/>
+        <spirit:internalPortReference spirit:componentRef="regfile_0" spirit:portRef="rst"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>cntrl_fsm_0_mem_en</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="cntrl_fsm_0" spirit:portRef="mem_en"/>
+        <spirit:externalPortReference spirit:portRef="mem_en"/>
+        <spirit:internalPortReference spirit:componentRef="mem_0" spirit:portRef="en"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>cntrl_fsm_0_alu_en</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="cntrl_fsm_0" spirit:portRef="alu_en"/>
+        <spirit:externalPortReference spirit:portRef="alu_en"/>
+        <spirit:internalPortReference spirit:componentRef="alu_0" spirit:portRef="en"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>cntrl_fsm_0_op_code</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="cntrl_fsm_0" spirit:portRef="op_code"/>
+        <spirit:externalPortReference spirit:portRef="op_code"/>
+        <spirit:internalPortReference spirit:componentRef="alu_0" spirit:portRef="op_code"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>cntrl_fsm_0_b</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="cntrl_fsm_0" spirit:portRef="b"/>
+        <spirit:externalPortReference spirit:portRef="alu_b"/>
+        <spirit:internalPortReference spirit:componentRef="alu_0" spirit:portRef="b"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>cntrl_fsm_0_reg_r_en</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="cntrl_fsm_0" spirit:portRef="reg_r_en"/>
+        <spirit:externalPortReference spirit:portRef="reg_r_en"/>
+        <spirit:internalPortReference spirit:componentRef="regfile_0" spirit:portRef="r_en"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>Net1</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="mem_0" spirit:portRef="data_frame"/>
+        <spirit:internalPortReference spirit:componentRef="cntrl_fsm_0" spirit:portRef="data_frame"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>regfile_0_rdata</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="cntrl_fsm_0" spirit:portRef="a"/>
+        <spirit:externalPortReference spirit:portRef="alu_a"/>
+        <spirit:internalPortReference spirit:componentRef="alu_0" spirit:portRef="a"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>regfile_0_rdata0</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="regfile_0" spirit:portRef="rdata0"/>
+        <spirit:externalPortReference spirit:portRef="rdata0"/>
+        <spirit:internalPortReference spirit:componentRef="cntrl_fsm_0" spirit:portRef="rdata0"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>regfile_0_rdata1</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="regfile_0" spirit:portRef="rdata1"/>
+        <spirit:internalPortReference spirit:componentRef="cntrl_fsm_0" spirit:portRef="rdata1"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>cntrl_fsm_0_raddr0</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="cntrl_fsm_0" spirit:portRef="raddr0"/>
+        <spirit:internalPortReference spirit:componentRef="regfile_0" spirit:portRef="raddr0"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>cntrl_fsm_0_raddr1</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="cntrl_fsm_0" spirit:portRef="raddr1"/>
+        <spirit:internalPortReference spirit:componentRef="regfile_0" spirit:portRef="raddr1"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>cntrl_fsm_0_pc_en</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="cntrl_fsm_0" spirit:portRef="pc_inc_en"/>
+        <spirit:externalPortReference spirit:portRef="pc_en"/>
+        <spirit:internalPortReference spirit:componentRef="pc_0" spirit:portRef="inc_en"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>cf_0_carry_out</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="cf_0" spirit:portRef="carry_out"/>
+        <spirit:internalPortReference spirit:componentRef="alu_0" spirit:portRef="c_in"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>alu_0_c_out</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="alu_0" spirit:portRef="c_out"/>
+        <spirit:internalPortReference spirit:componentRef="cf_0" spirit:portRef="carry_in"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>regfile_0_eax</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="regfile_0" spirit:portRef="eax"/>
+        <spirit:externalPortReference spirit:portRef="eax"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>regfile_0_ebx</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="regfile_0" spirit:portRef="ebx"/>
+        <spirit:externalPortReference spirit:portRef="ebx"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>regfile_0_ecx</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="regfile_0" spirit:portRef="ecx"/>
+        <spirit:externalPortReference spirit:portRef="ecx"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>pc_0_addr</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="pc_0" spirit:portRef="addr"/>
+        <spirit:externalPortReference spirit:portRef="addr"/>
+        <spirit:internalPortReference spirit:componentRef="mem_0" spirit:portRef="addr"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>alu_0_result</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="alu_0" spirit:portRef="result"/>
+        <spirit:externalPortReference spirit:portRef="alu_out"/>
+        <spirit:internalPortReference spirit:componentRef="regfile_0" spirit:portRef="wdata"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>cntrl_fsm_0_waddr</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="cntrl_fsm_0" spirit:portRef="waddr"/>
+        <spirit:externalPortReference spirit:portRef="waddr"/>
+        <spirit:internalPortReference spirit:componentRef="regfile_0" spirit:portRef="waddr"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>cntrl_fsm_0_reg_w_en</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="cntrl_fsm_0" spirit:portRef="reg_w_en"/>
+        <spirit:externalPortReference spirit:portRef="reg_w_en"/>
+        <spirit:internalPortReference spirit:componentRef="cf_0" spirit:portRef="en"/>
+        <spirit:internalPortReference spirit:componentRef="regfile_0" spirit:portRef="w_en"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>cntrl_fsm_0_pc_set</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="cntrl_fsm_0" spirit:portRef="pc_set"/>
+        <spirit:externalPortReference spirit:portRef="addr_set"/>
+        <spirit:internalPortReference spirit:componentRef="pc_0" spirit:portRef="set"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>cntrl_fsm_0_pc_set_en</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="cntrl_fsm_0" spirit:portRef="pc_set_en"/>
+        <spirit:externalPortReference spirit:portRef="addr_set_en"/>
+        <spirit:internalPortReference spirit:componentRef="pc_0" spirit:portRef="set_en"/>
+      </spirit:adHocConnection>
+    </spirit:adHocConnections>
+  </spirit:design>
+
+</bd:repository>

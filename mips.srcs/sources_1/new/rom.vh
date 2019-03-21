@@ -1,0 +1,1 @@
+`define CPU_CAP 4
